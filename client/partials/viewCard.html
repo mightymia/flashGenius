@@ -1,0 +1,40 @@
+<div>
+<!-- Nav Bar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	        <img alt="Brand" src="./assets/light-bulb-icon.png">
+	    </div>
+	    <ul class="nav navbar-nav">
+	    	<li><a href="#/viewProfile" ng-click='cardCrtl.getUserCards(userCrtl.user[0].username)'>User Profile</a></li>
+	    	<li><a href="#/create">Create new card</a></li>
+	    	<li><a href="#/dashboard">Flash Stack</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    	<li><a href="#/">Log Out</a></li>
+	    </ul>
+	  </div>
+	</nav>
+<!-- Page Content -->
+	<div id='cardView'>
+		<div id='displayFront'>
+			<p><span class='labels'>Topic: </span><span ng-bind='cardCrtl.card[0].topic'></span></p>
+			<p><span class='labels'>Question: </span> <span ng-bind='cardCrtl.card[0].question'></span></p> 
+			<img src="{{cardCrtl.card[0].frontImage}}" ng-show='cardCrtl.card[0].frontImage != null' width="150px" height="100px">
+			<ul id='multiChoice'>
+				<li><span ng-bind=cardCrtl.card[0].option1></span></li>
+				<li><span ng-bind=cardCrtl.card[0].option2></span></li>
+				<li><span ng-bind=cardCrtl.card[0].option3></span></li>
+				<li><span ng-bind=cardCrtl.card[0].option4></span></li>
+			</ul>
+		</div>
+		<div id='displayBack'>
+			<input type='checkbox' ng-model='checked'>Check for answer</input>
+			<div ng-show='checked'>
+				<p><span class="labels">Answer: </span><span ng-bind='cardCrtl.card[0].answer'></span></p>
+				<img src="{{cardCrtl.card[0].backImage}}" ng-show='cardCrtl.card[0].backImage != null' width="150px" height="100px">
+				<p ng-show='cardCrtl.card[0].sourceInfo != null'><span class='labels'>Source Info: </span><a href="{{cardCrtl.card[0].sourceInfo}}" target="_blank">Link!</a></p>
+			</div>	
+		</div>
+	</div>	
+</div>

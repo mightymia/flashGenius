@@ -1,0 +1,25 @@
+<div>
+<!-- Nav Bar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	        <img alt="Brand" src="./assets/light-bulb-icon.png">
+	    </div>
+	    <ul class="nav navbar-nav">
+	    	<li><a href="#/viewProfile" ng-click='cardCrtl.getUserCards(userCrtl.user[0].username)'>User Profile</a></li>
+	    	<li><a href="#/create">Create new card</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    	<li><a href="#/">Log Out</a></li>
+	    </ul>
+	  </div>
+	</nav>
+<!-- Page Content -->
+	<div id='flashDash'>
+		<h3>Flash Stack</h3>
+		<h4>Choose a flashcard stack below and start learning!</h4>
+		<div ng-repeat='topic in cardCrtl.topics' class='list-group'>
+			<button id='topicButton' type='button' class='list-group-item' width='50%'><a href="#/stack/{{topic}}" ng-click='cardCrtl.getStack(topic)'><span ng-bind='topic'></span></a></button>
+		</div >
+	</div>
+</div>

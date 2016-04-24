@@ -1,0 +1,119 @@
+#container{
+			margin: 5px;
+			padding: 5px;
+			background-image: url('oak_wood_structure.jpg');
+			background-repeat:repeat;
+		}
+
+/*login page*/
+		#login {
+			margin-top: 50px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 60%;
+			text-align: center;
+			padding-bottom: 300px;
+			padding-top: 20px;
+			background-image: url('notecard.jpg');
+		}
+
+/*card views*/
+		#cardView {
+			padding-bottom: 300px;
+		}
+		#displayFront {
+			border: 1px solid silver;
+			padding: 4px;
+			text-align: center;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+			background-image: url('notecard.jpg');
+		}
+		#displayBack {
+			border: 1px solid silver;
+			padding: 4px;
+			margin-top: 20px;
+			text-align: center;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+			background-image: url('notecard.jpg');
+		}
+		.labels {
+			font-weight: bold;
+		}
+		#multiChoice {
+			-webkit-column-count: 2;
+			list-style: none;
+		}
+
+/*User Views*/
+		#userProfile {
+			width: 60%;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#profileDiv {
+			background-image: url('notebook.jpg');
+			padding-bottom: 10px;
+		}
+		#cardTable {
+			background: white;
+			width: 60%;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 10px;
+		}
+
+/*Dashboard View*/
+		#flashDash {
+			width: 60%;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			background-image: url('notebook.jpg');
+			padding-bottom: 10px;
+		}
+		#topicButton{
+			background-color: #ffffcc;
+		}
+		#stackTable {
+			width: 40%;
+		}
+		button.list-group-item {
+		    width: 30%;
+		    text-align: center;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+		
+/*create & edit views*/
+		#front {
+			border: 1px solid silver;
+			padding: 4px;
+			text-align: center;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+			background-image: url('notecard.jpg');
+		}
+		#back {
+			border: 1px solid silver;
+			padding: 4px;
+			text-align: center;
+			margin-top: 20px;
+			width: 60%;
+			margin-left: auto;
+			margin-right: auto;
+			background-image: url('notecard.jpg');
+		}
+		#error {
+			color: red;
+			font-weight: bold;
+		}
+		#createTitle {
+			text-align: center;
+		}

@@ -1,0 +1,56 @@
+<div>
+<!-- Nav Bar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	        <img alt="Brand" src="./assets/light-bulb-icon.png">
+	    </div>
+	    <ul class="nav navbar-nav">
+	    	<li><a href="#/viewProfile" ng-click='cardCrtl.getUserCards(userCrtl.user[0].username)'>User Profile</a></li>
+	    	<li><a href="#/create">Create new card</a></li>
+	    	<li><a href="#/dashboard">Flash Stack</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    	<li><a href="#/">Log Out</a></li>
+	    </ul>
+	  </div>
+	</nav>
+<!-- Page Content -->
+	<h3 id='createTitle'>Edit your card</h3>
+	<form>
+		<div class="form-group">
+			<div id='front'>
+			<h4>Card Front</h4>
+			<label for='question'>Question</label>
+			<textarea class='form-control' rows='3' ng-model='cardCrtl.card[0].question'></textarea>
+			<label for='image'>Image(URL) (optional)</label>
+			<input class='form-control' type='url' ng-model='cardCrtl.card[0].frontImage'></input>
+			<label for='multipleChoice'>Multiple Choice (optional)</label>
+			<input class='form-control' type="text" ng-model='cardCrtl.card[0].option1'></input>
+			<input class='form-control' type="text" ng-model='cardCrtl.card[0].option2'></input>
+			<input class='form-control' type="text" ng-model='cardCrtl.card[0].option3'></input>
+			<input class='form-control' type="text" ng-model='cardCrtl.card[0].option4'></input>	
+		</div>
+		<div id='back'>
+			<h4>Card Back</h4>
+			<label for='answer'>Answer</label>
+			<textarea class='form-control' rows='6' ng-model='cardCrtl.card[0].answer'></textarea>
+			<label for='image'>Image(URL) (optional)</label>
+			<input class='form-control' type='url'ng-model='cardCrtl.card[0].backImage'></input>
+			<label for='sourceInfo'>Link to Source</label>
+			<input class='form-control' type='url' ng-model='cardCrtl.card[0].sourceInfo'></input>
+		</div>
+		<button type="button" class="btn btn-primary" ng-click='cardCrtl.updateCard(cardCrtl.card[0])'>Update!</button>
+	</form>
+	<div id='error'>
+		<ul ng-repeat='error in cardCrtl.angularErrors'>
+			<li ng-bind='error'></li>
+		</ul>
+	</div>
+	<ul ng-repeat='error in cardCrtl.errors'>
+		<ul ng-repeat='type in error'>
+		<ul ng-repeat='message in type'></ul>
+			<li ng-bind='type.message'></li>
+		</ul>
+</div>
+</div>

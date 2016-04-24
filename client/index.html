@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+	<title>Flash of Genius</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link href="./../client/favicon.ico" rel="icon" type="image/x-icon" />
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+	<script src="/script.js"></script>
+	<script type="text/javascript" src='/js/factory.js'></script>
+	<script type="text/javascript" src='/js/users_crtl.js'></script>
+	<script type="text/javascript" src="/js/cards_crtl.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+</head>
+<body>
+	<div ng-controller='usersController as userCrtl'>
+		<div ng-controller='cardsController as cardCrtl'>
+			<div id='container' ng-view></div>
+		</div>
+	</div>
+</body>
+</html>

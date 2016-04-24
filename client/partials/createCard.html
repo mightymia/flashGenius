@@ -1,0 +1,63 @@
+<div>
+<!-- Nav Bar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	        <img alt="Brand" src="./assets/light-bulb-icon.png">
+	    </div>
+	    <ul class="nav navbar-nav">
+	    	<li><a href="#/viewProfile" ng-click='cardCrtl.getUserCards(userCrtl.user[0].username)'>User Profile</a></li>
+	    	<li><a href="#/dashboard">Flash Stack</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    	<li><a href="#/">Log Out</a></li>
+	    </ul>
+	  </div>
+	</nav>
+<!-- Page Content -->
+	<h3 id='createTitle'>Create a new Flashcard</h3>
+	<form>
+		<div class='form-group'>
+			<div id='front'>
+				<h4>Card Front</h4>
+				<label for='topic'>Select Card Topic</label>
+				<select ng-model='cardCrtl.newCard.topic'>
+					<option ng-repeat='topic in cardCrtl.topics'>{{topic}}</option>
+				</select><br>
+				<input class='form-control' type='text' placeholder="or create a new topic" ng-model='cardCrtl.newCard.topic'></input>
+				<label for='question'>Question</label>
+				<textarea class='form-control' rows='3' ng-model='cardCrtl.newCard.question'></textarea>
+				<label for='image'>Image(URL) (optional)</label>
+				<input class='form-control' type='url' placeholder='http://' ng-model='cardCrtl.newCard.frontImage'></input>
+				<p>Image must end in .jpg, .png or .gif extension</p>
+				<label for='multipleChoice'>Multiple Choice (optional)</label>
+				<input class='form-control' type="text" placeholder="Option 1" ng-model='cardCrtl.newCard.option1'></input>
+				<input class='form-control' type="text" placeholder="Option 2" ng-model='cardCrtl.newCard.option2'></input>
+				<input class='form-control' type="text" placeholder="Option 3" ng-model='cardCrtl.newCard.option3'></input>
+				<input class='form-control' type="text" placeholder="Option 4" ng-model='cardCrtl.newCard.option4'></input>
+			</div>
+			<div id='back'>
+				<h4>Card Back</h4>
+				<label for='answer'>Answer</label>
+				<textarea class='form-control' rows='6' ng-model='cardCrtl.newCard.answer'></textarea>
+				<label for='image'>Image(URL) (optional)</label>
+				<input class='form-control' type='url' placeholder='http://' ng-model='cardCrtl.newCard.backImage'></input>
+				<p>Image must end in .jpg, .png or .gif extension</p>
+				<label for='sourceInfo'>Link to Source</label>
+				<input class='form-control' type='url' placeholder="http://" ng-model='cardCrtl.newCard.sourceInfo'></input>
+			</div>
+		</div>
+		<button type="button" class="btn btn-success" ng-click='cardCrtl.addCard(userCrtl.user[0].username)'>Create!</button>
+	</form>
+	<div id='error'>
+		<ul ng-repeat='error in cardCrtl.angularErrors'>
+			<li ng-bind='error'></li>
+		</ul>
+	</div>
+	<ul ng-repeat='error in cardCrtl.errors'>
+		<ul ng-repeat='type in error'>
+		<ul ng-repeat='message in type'></ul>
+			<li ng-bind='type.message'></li>
+		</ul>
+</div>
+</div>

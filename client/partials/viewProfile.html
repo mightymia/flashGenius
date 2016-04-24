@@ -1,0 +1,42 @@
+<div>
+<!-- Nav Bar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	        <img alt="Brand" src="./assets/light-bulb-icon.png">
+	    </div>
+	    <ul class="nav navbar-nav">
+	    	<li><a href="#/create">Create new card</a></li>
+	    	<li><a href="#/dashboard">Flash Stack</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    	<li><a href="#/">Log Out</a></li>
+	    </ul>
+	  </div>
+	</nav>
+<!-- Page Content -->
+	<div id='profileDiv'>
+		<div id='userProfile'>
+			<h3><span ng-bind="userCrtl.user[0].username"></span></h3>
+			<img src="{{userCrtl.user[0].image}}" width="75px" height="75px">
+			<form class="form-group">
+				<input type='text'  class='form-control' placeholder='http://' ng-model='userCrtl.newImage.image' width: '75%';>
+				<button type="button" class="btn btn-success" ng-click='userCrtl.updateUser(userCrtl.user[0].username)'>Update Avatar</button>
+			</form>
+		</div>
+		<div id='cardTable'>
+			<input class='pull-right' type='text' placeholder='search' ng-model='search.topic'>
+			<table class="table table-bordered">
+				<th>Topic</th>
+				<th>Question</th>
+				<th colspan="2">Actions</th>
+				<tr ng-repeat='card in cardCrtl.userCards | filter:search'>
+					<td><span ng-bind=card.topic></span></td>
+					<td><a href="#/viewCard" ng-click='cardCrtl.getCard(card.question)'><span ng-bind=card.question></span></td>
+					<td><a href="#/editCard" ng-click='cardCrtl.getCard(card.question)'>Edit</td>
+					<td><button class="btn btn-danger" ng-click='cardCrtl.removeCard(card)'>Delete</button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

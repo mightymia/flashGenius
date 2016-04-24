@@ -1,0 +1,47 @@
+<div>
+	<!-- Nav Bar -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	        <img alt="Brand" src="./assets/light-bulb-icon.png">
+	    </div>
+	    <ul class="nav navbar-nav">
+	    	<li><a href="#/viewProfile" ng-click='cardCrtl.getUserCards(userCrtl.user[0].username)'>User Profile</a></li>
+	    	<li><a href="#/create">Create new card</a></li>
+	    	<li><a href="#/dashboard">Flash Stack</a></li>
+	    </ul>
+	    <ul class="nav navbar-nav navbar-right">
+	    	<li><a href="#/">Log Out</a></li>
+	    </ul>
+	  </div>
+	</nav>
+<!-- Page Content -->
+	<div id='cardView'>
+		<div ng-repeat='selectedCard in [cardCrtl.selectedCard]'>
+			<div id='displayFront'>
+				<p><span class='labels'>Topic: </span><span ng-bind='selectedCard.topic'></span></p>
+				<p><span class='labels'>Question: </span> <span ng-bind=selectedCard.question></span></p> 
+				<img src="{{selectedCard.frontImage}}" ng-show='slectedCard.frontImage != null' width="150px" height="100px">
+				<ul id='multiChoice'>
+					<li><span ng-bind=selectedCard.option1></span></li>
+					<li><span ng-bind=selectedCard.option2></span></li>
+					<li><span ng-bind=selectedCard.option3></span></li>
+					<li><span ng-bind=selectedCard.option4></span></li>
+				</ul>
+			</div>
+			<div id='displayBack'>
+				<input type='checkbox' ng-model='checked'>Check for answer</input>
+				<div ng-show='checked'>
+					<p><span class="labels">Answer: </span><span ng-bind=selectedCard.answer></span></p>
+					<img src="{{selectedCard.backImage}}" ng-show='selectedCard.backImage != null' width="150px" height="100px">
+					<p ng-show='selectedCard.sourceInfo != null'><span class='labels'>Source Info: </span><a href="{{selectedCard.sourceInfo}}" target="_blank">Link!</a></p>
+					<p><span class='labels'>Creator: </span><a href="#/viewUserProfile/{{selectedCard.username}}" ng-click='cardCrtl.getUserCards(selectedCard.username); userCrtl.getUserProfile(selectedCard.username)'><span ng-bind=selectedCard.username></span></a></p>
+				</div>	
+			</div>
+			<div id='previousNext'>
+				<button class='pull-left btn btn-info' ng-click='cardCrtl.previousCard()'>Previous Card</button>
+				<button class='pull-right btn btn-info' ng-click='cardCrtl.nextCard()'>Next Card</button>
+			</div>
+		</div>
+	</div>
+</div>
