@@ -28,7 +28,6 @@ myApp.controller('cardsController', function($location, myAppFactory){
 			}
 		else{
 				$('#error').removeClass('hide');
-				_this.newCard = {};
 				_this.angularErrors = angularErrors;
 			}
 		});
