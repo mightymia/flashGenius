@@ -39,7 +39,7 @@ myApp.controller('usersController', function($location, myAppFactory){
 //update user avatar
 	this.updateUser = function(username){
 		debugger;
-		$('#errors').addClass('hide');
+		$('#error').addClass('hide');
 		myAppFactory.avatarValidation(_this.newImage, function(angularErrors){
 			if(angularErrors.length == 0){
 				debugger;

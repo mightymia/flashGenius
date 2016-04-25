@@ -20,10 +20,15 @@
 			<h3><span ng-bind="userCrtl.user[0].username"></span></h3>
 			<img src="{{userCrtl.user[0].image}}" width="75px" height="75px">
 			<form class="form-group">
-				<input type='text'  class='form-control' placeholder='http://' ng-model='userCrtl.newImage.image' width: '75%';>
+				<input type='text'  class='form-control' placeholder='http://' ng-model='userCrtl.newImage.image' width: '50%';>
 				<p>Image must end in .jpg, .png or .gif extension</p>
 				<button type="button" class="btn btn-success" ng-click='userCrtl.updateUser(userCrtl.user[0].username)'>Update Avatar</button>
 			</form>
+			<div id='error'>
+				<ul ng-repeat='error in userCrtl.angularErrors'>
+					<li ng-bind='error'></li>
+				</ul>
+			</div>
 		</div>
 		<div id='cardTable'>
 			<input class='pull-right' type='text' placeholder='search' ng-model='search.topic'>

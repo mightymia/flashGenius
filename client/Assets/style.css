@@ -61,6 +61,8 @@
 			padding-bottom: 300px;
 			border-radius: 15px;
 			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 		#cardTable {
 			background: white;

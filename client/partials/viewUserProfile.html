@@ -21,11 +21,6 @@
 			<h3><span ng-bind="userCrtl.userProfile[0].username"></span></h3>
 			<img src="{{userCrtl.userProfile[0].image}}" width="75px" height="75px">
 		</div>
-		<div id='error'>
-			<ul ng-repeat='error in userCrtl.angularErrors'>
-				<li ng-bind='error'></li>
-			</ul>
-		</div>
 	<div id='cardTable'>
 		<input class='pull-right' type='text' placeholder='search' ng-model='search.topic'>
 		<table class="table table-bordered">
