@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 require('./server/config/mongoose.js');
 require('./server/config/routes.js')(app);
 
-var server = app.listen(8600, function(){
-	console.log('listening to port 8600');
+var port = process.env.PORT || 3000;
+var server = app.listen(port, function(){
+	console.log('listening to' + port);
 })
