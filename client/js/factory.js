@@ -77,8 +77,6 @@ myApp.factory('myAppFactory', function($http){
 
 //avatar update validation
 	factory.avatarValidation = function(info, callback){
-		debugger;
-		// console.log(info);
 		angularErrors = [];
 		if(info.image != null  && info.image != ""){
 			var avatarExtension = info.image.slice(-3);

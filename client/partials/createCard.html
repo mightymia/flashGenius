@@ -56,8 +56,9 @@
 	</div>
 	<ul ng-repeat='error in cardCrtl.errors'>
 		<ul ng-repeat='type in error'>
-		<ul ng-repeat='message in type'></ul>
-			<li ng-bind='type.message'></li>
+			<ul ng-repeat='message in type'></ul>
+				<li ng-bind='type.message'></li>
 		</ul>
+	</ul>
 </div>
 </div>

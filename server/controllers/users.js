@@ -49,7 +49,6 @@ module.exports = (function(){
 
 		//update user
 		update: function(req, res){
-			console.log('users', req.body);
 			User.update({username: req.body.username}, {$set: {image: req.body.image}}, function(err, user){
 				if(err){
 					console.log(err);
