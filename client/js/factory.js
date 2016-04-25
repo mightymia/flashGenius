@@ -79,7 +79,6 @@ myApp.factory('myAppFactory', function($http){
 
 //card creation validation
 	factory.cardValidation = function(info, username, callback){
-		debugger;
 		info.username = username;
 		angularErrors = [];
 	//Topic
