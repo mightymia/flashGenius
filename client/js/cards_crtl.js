@@ -90,14 +90,14 @@ myApp.controller('cardsController', function($location, myAppFactory){
 			if(angularErrors.length == 0){
 				myAppFactory.updateCard(data, function(userCards){
 					debugger;
-					_this.errors = myAppFactory.getErrors();
-					if(_this.errors.length == 0){
+					// _this.errors = myAppFactory.getErrors();
+					// if(_this.errors.length == 0){
 						_this.userCards = userCards;
-						$location.path('/viewProfile/');
-					}
-					else{
-						$('#error').removeClass('hide');
-					}
+						$location.path('/viewProfile');
+					// }
+					// else{
+					// 	$('#error').removeClass('hide');
+					// }
 				});
 			}
 			else{
