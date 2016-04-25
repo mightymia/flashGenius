@@ -10,6 +10,7 @@ myApp.controller('cardsController', function($location, myAppFactory){
 
 //add new card	
 	this.addCard = function(username){
+		debugger;
 		$('#error').addClass('hide');
 		myAppFactory.cardValidation(_this.newCard, username, function(angularErrors){
 			if(angularErrors.length == 0){
