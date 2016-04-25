@@ -88,8 +88,8 @@ myApp.controller('cardsController', function($location, myAppFactory){
 		myAppFactory.cardValidation(data, username, function(angularErrors){
 			debugger;
 			if(angularErrors.length == 0){
-				debugger;
 				myAppFactory.updateCard(data, function(userCards){
+					debugger;
 					_this.errors = myAppFactory.getErrors();
 					if(_this.errors.length == 0){
 						_this.userCards = userCards;
