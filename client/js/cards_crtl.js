@@ -8,6 +8,14 @@ myApp.controller('cardsController', function($location, myAppFactory){
 		})
 	}
 
+//get Angular Errors
+	this.getAngularErrors = function(){
+		_this.angularErrors = myAppFactory.getAngularErrors();
+		if(_this.angularErrors == 0){
+			$('#error').addClass('hide');
+		}
+	}
+
 //add new card	
 	this.addCard = function(username){
 		$('#error').addClass('hide');
@@ -105,7 +113,7 @@ myApp.controller('cardsController', function($location, myAppFactory){
 		_this.selectedCard = _this.stack[selectedIndex];
 	}
 
-//move to next card in stacl
+//move to next card in stack
 	this.nextCard = function(){
 		_this.orientation = 'next';
 		if(++selectedIndex >= _this.stack.length){
