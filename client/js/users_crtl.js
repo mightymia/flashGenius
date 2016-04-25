@@ -14,6 +14,14 @@ myApp.controller('usersController', function($location, myAppFactory){
 //get errors from server
 	this.errors = myAppFactory.getErrors();
 
+//get Angular Errors
+	this.getAngularErrors = function(){
+		_this.angularErrors = myAppFactory.getAngularErrors();
+		if(_this.angularErrors == 0){
+			$('#error').addClass('hide');
+		}
+	}
+
 //get and or add user
 	this.getUser = function(){
 		if(myAppFactory.isUserNew(this.newUser.username) === true)

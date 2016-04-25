@@ -43,10 +43,10 @@
 		<button type="button" class="btn btn-primary" ng-click='cardCrtl.updateCard(cardCrtl.card[0])'>Update!</button>
 	</form>
 	<div id='error'>
-		<ul ng-repeat='error in cardCrtl.angularErrors'>
+		<ul class='ul_error' ng-repeat='error in cardCrtl.angularErrors'>
 			<li ng-bind='error'></li>
 		</ul>
-		<ul ng-repeat='error in cardCrtl.errors'>
+		<ul class='ul_error' ng-repeat='error in cardCrtl.errors'>
 			<ul ng-repeat='type in error'>
 				<ul ng-repeat='message in type'></ul>
 					<li ng-bind='type.message'></li>

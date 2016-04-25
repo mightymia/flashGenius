@@ -121,6 +121,10 @@
 			color: red;
 			font-weight: bold;
 		}
+		.ul_error {
+			list-style: none;
+		}
+
 		#createTitle {
 			text-align: center;
 		}
