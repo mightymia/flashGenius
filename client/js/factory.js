@@ -77,6 +77,7 @@ myApp.factory('myAppFactory', function($http){
 
 //avatar update validation
 	factory.avatarValidation = function(info, callback){
+		debugger;
 		angularErrors = [];
 		if(info.image != null  && info.image != ""){
 			var avatarExtension = info.image.slice(-3);
@@ -91,6 +92,7 @@ myApp.factory('myAppFactory', function($http){
 
 //card creation validation
 	factory.cardValidation = function(info, username, callback){
+		debugger;
 		info.username = username;
 		angularErrors = [];
 	//Topic

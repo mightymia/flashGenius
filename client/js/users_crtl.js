@@ -46,7 +46,6 @@ myApp.controller('usersController', function($location, myAppFactory){
 
 //update user avatar
 	this.updateUser = function(username){
-		debugger;
 		$('#error').addClass('hide');
 		myAppFactory.avatarValidation(_this.newImage, function(angularErrors){
 			debugger;
@@ -61,6 +60,7 @@ myApp.controller('usersController', function($location, myAppFactory){
 				_this.angularErrors = angularErrors;
 			}
 		});
+		console.log('outside user', angularErrors);
 	}
 
 //get another user profile
