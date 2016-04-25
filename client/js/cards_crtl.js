@@ -18,10 +18,13 @@ myApp.controller('cardsController', function($location, myAppFactory){
 
 //add new card	
 	this.addCard = function(username){
+		debugger;
 		$('#error').addClass('hide');
 		myAppFactory.cardValidation(_this.newCard, username, function(angularErrors){
+			debugger;
 			if(angularErrors.length == 0){
 				myAppFactory.addCard(_this.newCard, username, function(cards){
+				debugger;
 				_this.errors = myAppFactory.getErrors();
 					if(_this.errors.length == 0){
 						_this.userCards = cards;
@@ -80,9 +83,12 @@ myApp.controller('cardsController', function($location, myAppFactory){
 //update card content
 	this.updateCard = function(data){
 		var username = data.username;
+		debugger;
 		$('#error').addClass('hide');
 		myAppFactory.cardValidation(data, username, function(angularErrors){
+			debugger;
 			if(angularErrors.length == 0){
+				debugger;
 				myAppFactory.updateCard(data, function(userCards){
 					_this.errors = myAppFactory.getErrors();
 					if(_this.errors.length == 0){
