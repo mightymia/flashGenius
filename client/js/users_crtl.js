@@ -60,7 +60,7 @@ myApp.controller('usersController', function($location, myAppFactory){
 				_this.angularErrors = angularErrors;
 			}
 		});
-		console.log('outside user', angularErrors);
+		console.log('outside user', _this.angularErrors);
 	}
 
 //get another user profile
