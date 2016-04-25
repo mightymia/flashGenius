@@ -49,7 +49,7 @@
 		</div>
 		<button type="button" class="btn btn-success" ng-click='cardCrtl.addCard(userCrtl.user[0].username)'>Create!</button>
 	</form>
-	<div id='error'>
+	<div ng-show='cardCrtl.angularErrors' id='error'>
 		<ul class='ul_error' ng-repeat='error in cardCrtl.angularErrors'>
 			<li ng-bind='error'></li>
 		</ul>

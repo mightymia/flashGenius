@@ -42,7 +42,7 @@
 		</div>
 		<button type="button" class="btn btn-primary" ng-click='cardCrtl.updateCard(cardCrtl.card[0])'>Update!</button>
 	</form>
-	<div id='error'>
+	<div ng-show='cardCrtl.angularErrors != null' id='error'>
 		<ul class='ul_error' ng-repeat='error in cardCrtl.angularErrors'>
 			<li ng-bind='error'></li>
 		</ul>
