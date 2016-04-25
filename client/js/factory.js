@@ -59,9 +59,7 @@ myApp.factory('myAppFactory', function($http){
 
 //update user's avatar
 	factory.updateUser = function(info, username, callback){
-		debugger;
 		info.username = username;
-		console.log('in factory', info);
 		$http.post('/updateUser', info).success(function(output){
 			factory.user = output;
 			callback(factory.user)
