@@ -49,8 +49,8 @@ myApp.controller('usersController', function($location, myAppFactory){
 		debugger;
 		$('#error').addClass('hide');
 		myAppFactory.avatarValidation(_this.newImage, function(angularErrors){
+			debugger;
 			if(angularErrors.length == 0){
-				debugger;
 				myAppFactory.updateUser(_this.newImage, username, function(data){
 					_this.user = data
 					_this.newImage = {};
@@ -61,8 +61,6 @@ myApp.controller('usersController', function($location, myAppFactory){
 				_this.angularErrors = angularErrors;
 			}
 		});
-		_this.angularErrors = [];
-		$('#error').addClass('hide');
 	}
 
 //get another user profile
