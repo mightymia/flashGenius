@@ -75,6 +75,19 @@ myApp.factory('myAppFactory', function($http){
 		});
 	}
 
+//avatar update validation
+	factory.avatarValidation = function(info, callback){
+		debugger;
+		console.log(info);
+		// angularErrors = [];
+		// if(info.image != null  && info.image != ""){
+		// 	var frontImageExtension = info.frontImage.slice(-3);
+		// 	if(frontImageExtension != "jpg" && frontImageExtension != "png" && frontImageExtension !="gif"){
+		// 		angularErrors.push('Front image must end in .jpg, .png or .gif');
+		// 	}
+		// }
+	}
+
 //---------Card Functions-----------//
 
 //card creation validation

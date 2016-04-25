@@ -38,10 +38,15 @@ myApp.controller('usersController', function($location, myAppFactory){
 
 //update user avatar
 	this.updateUser = function(username){
-		myAppFactory.updateUser(_this.newImage, username, function(data){
-			_this.user = data
-			_this.newImage = {};
+		debugger;
+		$('#errors').addClass('hide');
+		myAppFactory.avatarValidation(_this.newImage, function(angularErrors){
+			console.log(angularErrors);
 		})
+		// myAppFactory.updateUser(_this.newImage, username, function(data){
+		// 	_this.user = data
+		// 	_this.newImage = {};
+		// })
 	}
 
 //get another user profile
