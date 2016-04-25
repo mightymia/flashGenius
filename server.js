@@ -10,6 +10,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 require('./server/config/mongoose.js');
 require('./server/config/routes.js')(app);
 
-var server = app.listen(80, function(){
+var server = app.listen(8600, function(){
 	console.log('listening to port 80');
 })
