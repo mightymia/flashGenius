@@ -94,6 +94,7 @@ myApp.controller('cardsController', function($location, myAppFactory){
 					// if(_this.errors.length == 0){
 						_this.userCards = userCards;
 						$location.path('/viewProfile');
+						console.log('inside update', angularErrors);
 					// }
 					// else{
 					// 	$('#error').removeClass('hide');
@@ -107,6 +108,7 @@ myApp.controller('cardsController', function($location, myAppFactory){
 				}				
 			}
 		});
+		console.log('outside update', _this.angularErrors);
 	}
 
 //variable for card navigation array index
