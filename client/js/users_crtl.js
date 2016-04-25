@@ -42,6 +42,7 @@ myApp.controller('usersController', function($location, myAppFactory){
 		$('#errors').addClass('hide');
 		myAppFactory.avatarValidation(_this.newImage, function(angularErrors){
 			if(angularErrors.length == 0){
+				debugger;
 				myAppFactory.updateUser(_this.newImage, username, function(data){
 					_this.user = data
 					_this.newImage = {};

@@ -17,6 +17,7 @@ module.exports = function(app){
 	})
 
 	app.post('/updateUser', function(req, res){
+		console.log('routes', req.body);
 		users.update(req, res);
 	})
 
