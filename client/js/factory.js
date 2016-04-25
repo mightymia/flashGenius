@@ -124,7 +124,6 @@ myApp.factory('myAppFactory', function($http){
 //add card
 	factory.addCard = function(info, username, callback){
 		info.username = username;
-		angularErrors = [];
 		errors = [];
 		$http.post('/newCard', info).success(function(output){
 			if(output.errors){
@@ -153,7 +152,6 @@ myApp.factory('myAppFactory', function($http){
 
 //update card
 	factory.updateCard = function(card, callback){
-		angularErrors = [];
 		errors = [];
 		$http.post('/updateCard', card).success(function(output){
 			if(output.errors){
