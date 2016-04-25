@@ -5,7 +5,7 @@ var path = require('path');
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } }, 
                 replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };       
  
-var mongodbUri = 'mongodb://mclapham10:Shanny14$@ds019491.mlab.com:19491/heroku_nvx8kh20';
+var mongodbUri = 'mongodb://mclapham10:Shanny14@ds019491.mlab.com:19491/heroku_nvx8kh20';
  
 mongoose.connect(mongodbUri, options);
 var conn = mongoose.connection;             
