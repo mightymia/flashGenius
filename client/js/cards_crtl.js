@@ -16,7 +16,7 @@ myApp.controller('cardsController', function($location, myAppFactory){
 				myAppFactory.addCard(_this.newCard, username, function(cards){
 				_this.errors = myAppFactory.getErrors();
 					if(_this.errors.length == 0){
-						_this.cards = cards;
+						_this.userCards = cards;
 						$location.path('/viewProfile');
 						_this.newCard = {};
 					}
