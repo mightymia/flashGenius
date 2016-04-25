@@ -81,8 +81,8 @@ myApp.factory('myAppFactory', function($http){
 		// console.log(info);
 		angularErrors = [];
 		if(info.image != null  && info.image != ""){
-			var frontImageExtension = info.frontImage.slice(-3);
-			if(frontImageExtension != "jpg" && frontImageExtension != "png" && frontImageExtension !="gif"){
+			var avatarExtension = info.image.slice(-3);
+			if(avatarExtension != "jpg" && avatarExtension != "png" && frontImageExtension !="gif"){
 				angularErrors.push('Avatar must end in .jpg, .png or .gif');
 			}
 		}
