@@ -21,7 +21,7 @@
 			<div id='displayFront'>
 				<p><span class='labels'>Topic: </span><span ng-bind='selectedCard.topic'></span></p>
 				<p><span class='labels'>Question: </span> <span ng-bind=selectedCard.question></span></p> 
-				<img src="{{selectedCard.frontImage}}" ng-show='selectedCard.frontImage != null' width="150px" height="100px">
+				<img src="{{selectedCard.frontImage}}" ng-show='selectedCard.frontImage != null && selectedCard.frontImage != ""' width="150px" height="100px">
 				<ul id='multiChoice'>
 					<li><span ng-bind=selectedCard.option1></span></li>
 					<li><span ng-bind=selectedCard.option2></span></li>
@@ -33,7 +33,7 @@
 				<input type='checkbox' ng-model='checked'>Check for answer</input>
 				<div ng-show='checked'>
 					<p><span class="labels">Answer: </span><span ng-bind=selectedCard.answer></span></p>
-					<img src="{{selectedCard.backImage}}" ng-show='selectedCard.backImage != null' width="150px" height="100px">
+					<img src="{{selectedCard.backImage}}" ng-show='selectedCard.backImage != null && selectedCard.backImage != ""' width="150px" height="100px">
 					<p ng-show='selectedCard.sourceInfo != null'><span class='labels'>Source Info: </span><a href="{{selectedCard.sourceInfo}}" target="_blank">Link!</a></p>
 					<p><span class='labels'>Creator: </span><a href="#/viewUserProfile/{{selectedCard.username}}" ng-click='cardCrtl.getUserCards(selectedCard.username); userCrtl.getUserProfile(selectedCard.username)'><span ng-bind=selectedCard.username></span></a></p>
 				</div>	

@@ -20,7 +20,7 @@
 		<div id='displayFront'>
 			<p><span class='labels'>Topic: </span><span ng-bind='cardCrtl.card[0].topic'></span></p>
 			<p><span class='labels'>Question: </span> <span ng-bind='cardCrtl.card[0].question'></span></p> 
-			<img src="{{cardCrtl.card[0].frontImage}}" ng-show='cardCrtl.card[0].frontImage != null' width="150px" height="100px">
+			<img src="{{cardCrtl.card[0].frontImage}}" ng-show='cardCrtl.card[0].frontImage != null && cardCrtl.card[0].frontImage != ""' width="150px" height="100px">
 			<ul id='multiChoice'>
 				<li><span ng-bind=cardCrtl.card[0].option1></span></li>
 				<li><span ng-bind=cardCrtl.card[0].option2></span></li>
@@ -33,7 +33,7 @@
 			<div ng-show='checked'>
 				<p><span class="labels">Answer: </span><span ng-bind='cardCrtl.card[0].answer'></span></p>
 				<img src="{{cardCrtl.card[0].backImage}}" ng-show='cardCrtl.card[0].backImage != null' width="150px" height="100px">
-				<p ng-show='cardCrtl.card[0].sourceInfo != null'><span class='labels'>Source Info: </span><a href="{{cardCrtl.card[0].sourceInfo}}" target="_blank">Link!</a></p>
+				<p ng-show='cardCrtl.card[0].sourceInfo != null && cardCrtl.card[0].backImage != ""'><span class='labels'>Source Info: </span><a href="{{cardCrtl.card[0].sourceInfo}}" target="_blank">Link!</a></p>
 			</div>	
 		</div>
 	</div>	
