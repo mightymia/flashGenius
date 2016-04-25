@@ -101,8 +101,10 @@ myApp.controller('cardsController', function($location, myAppFactory){
 				});
 			}
 			else{
-				$('#error').removeClass('hide');
 				_this.angularErrors = angularErrors;
+				if(_this.angularErrors.length != 0){
+					$('#error').removeClass('hide');
+				}				
 			}
 		});
 	}
