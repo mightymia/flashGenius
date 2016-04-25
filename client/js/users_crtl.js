@@ -61,6 +61,8 @@ myApp.controller('usersController', function($location, myAppFactory){
 				_this.angularErrors = angularErrors;
 			}
 		});
+		_this.angularErrors = [];
+		$('#error').addClass('hide');
 	}
 
 //get another user profile
