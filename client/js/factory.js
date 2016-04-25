@@ -94,13 +94,13 @@ myApp.factory('myAppFactory', function($http){
 			angularErrors.push('Answer is required');
 		}
 	//Images
-		if(info.frontImage != null  || info.frontImage == ""){
+		if(info.frontImage != null  || info.frontImage != ""){
 			var frontImageExtension = info.frontImage.slice(-3);
 			if(frontImageExtension != "jpg" && frontImageExtension != "png" && frontImageExtension !="gif"){
 				angularErrors.push('Front image must end in .jpg, .png or .gif');
 			}
 		}
-		if(info.backImage != null  || info.backImage == ""){
+		if(info.backImage != null  || info.backImage != ""){
 			var backImageExtension = info.backImage.slice(-3);
 			if(backImageExtension != "jpg" && backImageExtension != "png" && backImageExtension !="gif"){
 				angularErrors.push('Back image must end in .jpg, .png or .gif');
