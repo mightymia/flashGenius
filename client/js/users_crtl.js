@@ -41,12 +41,17 @@ myApp.controller('usersController', function($location, myAppFactory){
 		debugger;
 		$('#errors').addClass('hide');
 		myAppFactory.avatarValidation(_this.newImage, function(angularErrors){
-			console.log(angularErrors);
-		})
-		// myAppFactory.updateUser(_this.newImage, username, function(data){
-		// 	_this.user = data
-		// 	_this.newImage = {};
-		// })
+			if(angularErrors.length == 0){
+				myAppFactory.updateUser(_this.newImage, username, function(data){
+					_this.user = data
+					_this.newImage = {};
+				});
+			}
+			else{
+				$('#error').removeClass('hide');
+				_this.angularErrors = angularErrors;
+			}
+		});
 	}
 
 //get another user profile
