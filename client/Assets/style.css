@@ -114,10 +114,10 @@
 		#back {
 			border: 1px solid silver;
 			padding: 4px;
-			text-align: center;
 			margin-top: 20px;
 			width: 60%;
-			margin-left: auto;
+			margin-left: auto;			text-align: center;
+
 			margin-right: auto;
 			background-image: url('notecard.jpg');
 		}

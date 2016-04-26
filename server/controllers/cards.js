@@ -43,7 +43,6 @@ module.exports = (function(){
 
 		//get user's cards
 		get_userStack: function(req, res){
-			console.log(req.body);
 			Card.find({username: req.body.username}, function(err, results){
 				if(err){
 					console.log(err);
