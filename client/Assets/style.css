@@ -17,6 +17,10 @@
 			background-image: url('notecard.jpg');
 		}
 
+		#logo {
+			margin-top: 25px;
+		}
+
 /*card views*/
 		#cardView {
 			padding-bottom: 500px;
