@@ -121,6 +121,9 @@
 			margin-right: auto;
 			background-image: url('notecard.jpg');
 		}
+		.requiredFields {
+			color: red;
+		}
 		#error {
 			color: red;
 			font-weight: bold;

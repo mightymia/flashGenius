@@ -21,11 +21,11 @@
 		<div class="form-group">
 			<div id='front'>
 			<h4>Card Front</h4>
-			<label for='question'>Question</label>
+			<label for='question'>Question<span class='requiredFields'>*</span></label>
 			<textarea class='form-control' rows='3' ng-model='cardCrtl.card[0].question'></textarea>
-			<label for='image'>Image(URL) (optional)</label>
+			<label for='image'>Image(URL)</label>
 			<input class='form-control' type='url' ng-model='cardCrtl.card[0].frontImage'></input>
-			<label for='multipleChoice'>Multiple Choice (optional)</label>
+			<label for='multipleChoice'>Multiple Choice</label>
 			<input class='form-control' type="text" ng-model='cardCrtl.card[0].option1'></input>
 			<input class='form-control' type="text" ng-model='cardCrtl.card[0].option2'></input>
 			<input class='form-control' type="text" ng-model='cardCrtl.card[0].option3'></input>
@@ -33,12 +33,13 @@
 		</div>
 		<div id='back'>
 			<h4>Card Back</h4>
-			<label for='answer'>Answer</label>
+			<label for='answer'>Answer<span class='requiredFields'>*</span></label>
 			<textarea class='form-control' rows='6' ng-model='cardCrtl.card[0].answer'></textarea>
-			<label for='image'>Image(URL) (optional)</label>
+			<label for='image'>Image(URL)</label>
 			<input class='form-control' type='url'ng-model='cardCrtl.card[0].backImage'></input>
 			<label for='sourceInfo'>Link to Source</label>
 			<input class='form-control' type='url' ng-model='cardCrtl.card[0].sourceInfo'></input>
+			<p class='requireFields'>* are required fields</p>
 		</div>
 		<button type="button" class="btn btn-primary" ng-click='cardCrtl.updateCard(cardCrtl.card[0])'>Update!</button>
 	</form>

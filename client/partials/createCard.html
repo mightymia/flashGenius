@@ -20,17 +20,17 @@
 		<div class='form-group'>
 			<div id='front'>
 				<h4>Card Front</h4>
-				<label for='topic'>Select Card Topic</label>
+				<label for='topic'>Select Card Topic<span class='requiredFields'>*</span></label>
 				<select ng-model='cardCrtl.newCard.topic'>
 					<option ng-repeat='topic in cardCrtl.topics'>{{topic}}</option>
 				</select><br>
 				<input class='form-control' type='text' placeholder="or create a new topic" ng-model='cardCrtl.newCard.topic'></input>
-				<label for='question'>Question</label>
+				<label for='question'>Question<span class='requiredFields'>*</span></label>
 				<textarea class='form-control' rows='3' ng-model='cardCrtl.newCard.question'></textarea>
-				<label for='image'>Image(URL) (optional)</label>
+				<label for='image'>Image(URL)</label>
 				<input class='form-control' type='url' placeholder='http://' ng-model='cardCrtl.newCard.frontImage'></input>
 				<p>Image must end in .jpg, .png or .gif extension</p>
-				<label for='multipleChoice'>Multiple Choice (optional)</label>
+				<label for='multipleChoice'>Multiple Choice</label>
 				<input class='form-control' type="text" placeholder="Option 1" ng-model='cardCrtl.newCard.option1'></input>
 				<input class='form-control' type="text" placeholder="Option 2" ng-model='cardCrtl.newCard.option2'></input>
 				<input class='form-control' type="text" placeholder="Option 3" ng-model='cardCrtl.newCard.option3'></input>
@@ -38,13 +38,14 @@
 			</div>
 			<div id='back'>
 				<h4>Card Back</h4>
-				<label for='answer'>Answer</label>
+				<label for='answer'>Answer<span class='requiredFields'>*</span></label>
 				<textarea class='form-control' rows='6' ng-model='cardCrtl.newCard.answer'></textarea>
-				<label for='image'>Image(URL) (optional)</label>
+				<label for='image'>Image(URL)</label>
 				<input class='form-control' type='url' placeholder='http://' ng-model='cardCrtl.newCard.backImage'></input>
 				<p>Image must end in .jpg, .png or .gif extension</p>
 				<label for='sourceInfo'>Link to Source</label>
 				<input class='form-control' type='url' placeholder="http://" ng-model='cardCrtl.newCard.sourceInfo'></input>
+				<p class='requireFields'>* are required fields</p>
 			</div>
 		</div>
 		<button type="button" class="btn btn-success" ng-click='cardCrtl.addCard(userCrtl.user[0].username)'>Create!</button>
