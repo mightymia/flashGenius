@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var fs = require('fs');
 var path = require('path');
 
+//mLab's recommended Mongoose setup
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } }, 
                 replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };       
  
@@ -16,8 +17,6 @@ conn.once('open', function() {
   // Wait for the database connection to establish, then start the app.                         
 });
 
-
-// mongoose.connect('mongodb://localhost/flashGenius');
 
 var models_path = __dirname + '/../models';
 
