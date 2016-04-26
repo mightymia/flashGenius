@@ -32,8 +32,8 @@
 			<input type='checkbox' ng-model='checked'>Check for answer</input>
 			<div ng-show='checked'>
 				<p><span class="labels">Answer: </span><span ng-bind='cardCrtl.card[0].answer'></span></p>
-				<img src="{{cardCrtl.card[0].backImage}}" ng-show='cardCrtl.card[0].backImage != null' width="150px" height="100px">
-				<p ng-show='cardCrtl.card[0].sourceInfo != null && cardCrtl.card[0].backImage != ""'><span class='labels'>Source Info: </span><a href="{{cardCrtl.card[0].sourceInfo}}" target="_blank">Link!</a></p>
+				<img src="{{cardCrtl.card[0].backImage}}" ng-show='cardCrtl.card[0].backImage != null && cardCrtl.card[0].backImage != ""' width="150px" height="100px">
+				<p ng-show='cardCrtl.card[0].sourceInfo != null && cardCrtl.card[0].sourceInfo != ""'><span class='labels'>Source Info: </span><a href="{{cardCrtl.card[0].sourceInfo}}" target="_blank">Link!</a></p>
 			</div>	
 		</div>
 	</div>	

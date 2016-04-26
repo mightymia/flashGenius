@@ -34,7 +34,7 @@
 				<div ng-show='checked'>
 					<p><span class="labels">Answer: </span><span ng-bind=selectedCard.answer></span></p>
 					<img src="{{selectedCard.backImage}}" ng-show='selectedCard.backImage != null && selectedCard.backImage != ""' width="150px" height="100px">
-					<p ng-show='selectedCard.sourceInfo != null'><span class='labels'>Source Info: </span><a href="{{selectedCard.sourceInfo}}" target="_blank">Link!</a></p>
+					<p ng-show='selectedCard.sourceInfo != null && selectedCard.sourceInfo != ""'><span class='labels'>Source Info: </span><a href="{{selectedCard.sourceInfo}}" target="_blank">Link!</a></p>
 					<p><span class='labels'>Creator: </span><a href="#/viewUserProfile/{{selectedCard.username}}" ng-click='cardCrtl.getUserCards(selectedCard.username); userCrtl.getUserProfile(selectedCard.username)'><span ng-bind=selectedCard.username></span></a></p>
 				</div>	
 			</div>
