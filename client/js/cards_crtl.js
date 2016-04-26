@@ -8,24 +8,13 @@ myApp.controller('cardsController', function($location, myAppFactory){
 		})
 	}
 
-//get Angular Errors
-	// this.getAngularErrors = function(){
-	// 	_this.angularErrors = myAppFactory.getAngularErrors();
-	// 	if(_this.angularErrors == 0){
-	// 		$('#error').addClass('hide');
-	// 	}
-	// }
-
 //add new card	
 	this.addCard = function(username){
-		debugger;
 		$('#error').addClass('hide');
 		myAppFactory.cardValidation(_this.newCard, username, function(angularErrors){
-			debugger;
 			if(angularErrors.length == 0){
 				myAppFactory.addCard(_this.newCard, username, function(cards){
 				_this.angularErrors = [];
-				debugger;
 				_this.errors = myAppFactory.getErrors();
 					if(_this.errors.length == 0){
 						_this.userCards = cards;
@@ -84,19 +73,15 @@ myApp.controller('cardsController', function($location, myAppFactory){
 //update card content
 	this.updateCard = function(data){
 		var username = data.username;
-		debugger;
 		$('#error').addClass('hide');
 		myAppFactory.cardValidation(data, username, function(angularErrors){
-			debugger;
 			if(angularErrors.length == 0){
 				myAppFactory.updateCard(data, function(userCards){
-					debugger;
 					_this.angularErrors = [];
 					_this.errors = myAppFactory.getErrors();
 					if(_this.errors.length == 0){
 						_this.userCards = userCards;
 						$location.path('/viewProfile');
-						console.log('inside update', angularErrors);
 					}
 					else{
 						$('#error').removeClass('hide');
@@ -110,7 +95,6 @@ myApp.controller('cardsController', function($location, myAppFactory){
 				}				
 			}
 		})
-		console.log('outside update', _this.angularErrors);
 	}
 
 //variable for card navigation array index

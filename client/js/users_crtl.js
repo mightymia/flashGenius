@@ -14,14 +14,6 @@ myApp.controller('usersController', function($location, myAppFactory){
 //get errors from server
 	this.errors = myAppFactory.getErrors();
 
-//get Angular Errors
-	this.getAngularErrors = function(){
-		_this.angularErrors = myAppFactory.getAngularErrors();
-		if(_this.angularErrors == 0){
-			$('#error').addClass('hide');
-		}
-	}
-
 //get and or add user
 	this.getUser = function(){
 		if(myAppFactory.isUserNew(this.newUser.username) === true)
@@ -48,9 +40,9 @@ myApp.controller('usersController', function($location, myAppFactory){
 	this.updateUser = function(username){
 		$('#error').addClass('hide');
 		myAppFactory.avatarValidation(_this.newImage, function(angularErrors){
-			debugger;
 			if(angularErrors.length == 0){
 				myAppFactory.updateUser(_this.newImage, username, function(data){
+					_this.angularErrors = [];
 					_this.user = data
 					_this.newImage = {};
 				});
@@ -59,8 +51,7 @@ myApp.controller('usersController', function($location, myAppFactory){
 				$('#error').removeClass('hide');
 				_this.angularErrors = angularErrors;
 			}
-		});
-		console.log('outside user', _this.angularErrors);
+		})
 	}
 
 //get another user profile
